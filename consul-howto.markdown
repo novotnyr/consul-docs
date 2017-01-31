@@ -261,7 +261,7 @@ Consul on Windows
 
 * configure Windows network adapter:
 
-  * open **Control Panel** | **Networks and Internet** | **Networks Center**
+  * open **Control Panel** / **Networks and Internet** / **Networks Center**
 
   * navigate to the active connection details
 
