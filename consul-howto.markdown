@@ -237,10 +237,12 @@ Consul on Windows
     ```
     {
       "bootstrap" : true,
+      "server" : true,
+      "ui" : true,
       "service" : {
         "name" : "web",
         "port" : 80
-      }
+      },
       "ports" : {
         "dns" : 53
       },
@@ -249,16 +251,17 @@ Consul on Windows
       ]
     }
     ```
+  * the `web` service is just for testing purposes. It will be autoregistered at startup.   
 
-* start Consul agent. Make sure that there is `/var/lib/consul` directory:
+* start Consul agent. Make sure that there is `C:/var/lib/consul` directory:
 
   ```
-  consul agent -server -data-dir=/var/lib/consul -bind=127.0.0.1 -ui
+  consul agent -data-dir=/var/lib/consul -config-file=/etc/consul.d -bind=127.0.0.1 
   ```
 
 * configure Windows network adapter:
 
-  * open **Control Panel | Networks and Internet | Networks Center**
+  * open **Control Panel** | **Networks and Internet** | **Networks Center**
 
   * navigate to the active connection details
 
